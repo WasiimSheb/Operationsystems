@@ -1,2 +1,7 @@
+#ifndef POISSON_H
+#define POISSON_H
 
-double poisson(double lambda, int k);
+long double poisson_calc(long double lambda, int k);
+int factorial(int n);
+
+#endif
