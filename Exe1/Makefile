@@ -23,7 +23,7 @@
 ## now we'll have a recursive implementation of this Makefile
 
 # List of subdirectories
-SUBDIRS = exe1 exe2 exe3 exe4 exe5 exe6
+SUBDIRS = Q1 Q2 Q3 Q4 Q5 Q6
 
 # Default target
 all: $(SUBDIRS)
@@ -34,22 +34,22 @@ $(SUBDIRS):
 
 # Recursive call to build all subdirectories
 exe1:
-	$(MAKE) -C exe1
+	$(MAKE) -C Q1
 
 exe2:
-	$(MAKE) -C exe2
+	$(MAKE) -C Q2
 
 exe3:
-	$(MAKE) -C exe3
+	$(MAKE) -C Q3
 
 exe4:
-	$(MAKE) -C exe4
+	$(MAKE) -C Q4
 
 exe5:
-	$(MAKE) -C exe5
+	$(MAKE) -C Q5
 
 exe6:
-	$(MAKE) -C exe6
+	$(MAKE) -C Q6
 
 # Clean target for each subdirectory
 .PHONY: clean $(SUBDIRS)
