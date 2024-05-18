@@ -1,25 +1,25 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
+CFLAGS = -Wall -Wextra -std=c99 -g
 
-all: part1 part2 part3
+all: divideByZero stackOverFlow undefinedMemory
 
-part1: part1.o
+divideByZero: divideByZero.o
 	$(CC) $(CFLAGS) -o $@ $^
 
-part2: part2.o
+stackOverFlow: stackOverFlow.o
 	$(CC) $(CFLAGS) -o $@ $^
 
-part3: part3.o
+undefinedMemory: undefinedMemory.o
 	$(CC) $(CFLAGS) -o $@ $^
 
-part1.o: part1.c
+divideByZero.o: divideByZero.c
 	$(CC) $(CFLAGS) -c $<
 
-part2.o: part2.c
+stackOverFlow.o: stackOverFlow.c
 	$(CC) $(CFLAGS) -c $<
 
-part3.o: part3.c
+undefinedMemory.o: undefinedMemory.c
 	$(CC) $(CFLAGS) -c $<
 
 clean:
-	rm -f part1 part2 part3 *.o core
+	rm -f divideByZero stackOverFlow undefinedMemory *.o
